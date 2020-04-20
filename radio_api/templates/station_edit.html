@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Edit station #{{ station.id }}</title>
+    <link rel="stylesheet" href="/css/radio.css" type="text/css" media="screen">
+  </head>
+  <body>
+    <div class="wrapper">
+      <form method="post" action="/stations/edit/{{ station.station_id }}">
+        <table>
+          <tr>
+            <td>Station ID:</td>
+            <td><input name="station_id" type="number" value="{{ station.station_id }}"></td>
+          </tr>
+          <tr>
+            <td>Station name:</td>
+            <td><input name="station_name" type="text" value="{{ station.station_name }}"></td>
+          </tr>
+          <tr>
+            <td>Station URL:</td>
+            <td><input name="station_url" type="text" value="{{ station.station_url }}"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" value="Submit"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

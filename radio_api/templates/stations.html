@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Stations</title>
+    <link rel="stylesheet" href="/css/radio.css" type="text/css" media="screen">
+  </head>
+  <body>
+    <div class="wrapper">
+      <table>
+        <tr>
+          <td><b>ID</b></td>
+          <td><b>Station name</b></td>
+          <td colspan="3"><b>Action</b></td>
+        </tr>
+
+        {% for item in result.results %}
+        <tr>
+          <td>{{ item["station_id"] }}</td>
+          <td><a href="{{ item['station_url'] }}">{{ item['station_name'] }}</a></td>
+          <td><a href="/stations/play/{{ item['station_id'] }}">play</a></td>
+          <td><a href="/stations/edit/{{ item['station_id'] }}">edit</a></td>
+          <td><a href="/stations/delete/{{ item['station_id'] }}">delete</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+      <a href="/">[back to main]</a>
+    </div>
+  </body>
+</html>

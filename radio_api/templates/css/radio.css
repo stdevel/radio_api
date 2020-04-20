@@ -1,0 +1,31 @@
+html, body {
+    font-size: x-large;
+    background-color: #F5F7D4;
+    color: #0A3409;
+}
+
+a {
+    color: #4A8849;
+}
+
+div.wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+tr:nth-child(odd){ 
+    background: #E4F132;
+}
+
+tr:nth-child(even){
+    background: #98CA32;
+}

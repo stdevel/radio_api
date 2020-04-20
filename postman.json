@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "73a4b5c3-7064-49bb-a51e-07ad21da54da",
+		"name": "radio_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Stations",
+			"item": [
+				{
+					"name": "Show stations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/stations/0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"0"
+							]
+						},
+						"description": "Shows all stations"
+					},
+					"response": []
+				},
+				{
+					"name": "Show station",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/stations/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"1"
+							]
+						},
+						"description": "Shows a particular station"
+					},
+					"response": []
+				},
+				{
+					"name": "Show station by name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/stations/Fritz",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"Fritz"
+							]
+						},
+						"description": "Shows a particular station by name"
+					},
+					"response": []
+				},
+				{
+					"name": "Add station",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"item\": {\n\t\t\"url\": \"http://hr-hr3-live.cast.addradio.de/hr/hr3/live/mp3/128/stream.mp3\",\n\t\t\"name\": \"hr3\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/stations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations"
+							]
+						},
+						"description": "Adds a new station"
+					},
+					"response": []
+				},
+				{
+					"name": "Update station",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"item\": {\"id\": 200, \"name\": \"hr3\", \"url\": \"http://hr-hr3-live.cast.addradio.de/hr/hr3/live/mp3/128/stream.mp3\"}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/stations/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"2"
+							]
+						},
+						"description": "Updates an existing station"
+					},
+					"response": []
+				},
+				{
+					"name": "Update station by name",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"item\": {\"id\": 200, \"name\": \"hr3\", \"url\": \"http://hr-hr3-live.cast.addradio.de/hr/hr3/live/mp3/128/stream.mp3\"}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/stations/hr3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"hr3"
+							]
+						},
+						"description": "Updates an existing station by name"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete station",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/stations/200",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"200"
+							]
+						},
+						"description": "Deletes an existing station"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete station by name",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/stations/hr3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"hr3"
+							]
+						},
+						"description": "Deletes an existing station by name"
+					},
+					"response": []
+				},
+				{
+					"name": "Play station",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/stations/1/play",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"1",
+								"play"
+							]
+						},
+						"description": "Plays a particular station"
+					},
+					"response": []
+				},
+				{
+					"name": "Play station by name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/stations/Fritz/play",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stations",
+								"Fritz",
+								"play"
+							]
+						},
+						"description": "Plays a particular station by name"
+					},
+					"response": []
+				},
+				{
+					"name": "Stop radio",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/stop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stop"
+							]
+						},
+						"description": "Stops the radio"
+					},
+					"response": []
+				},
+				{
+					"name": "Next station",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/next",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"next"
+							]
+						},
+						"description": "Plays the next station"
+					},
+					"response": []
+				},
+				{
+					"name": "Previous station",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/previous",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"previous"
+							]
+						},
+						"description": "Plays the previous station"
+					},
+					"response": []
+				},
+				{
+					"name": "Current station",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/current",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"current"
+							]
+						},
+						"description": "Returns the currently played station"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Volume",
+			"item": [
+				{
+					"name": "Show current volume",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/volume",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"volume"
+							]
+						},
+						"description": "Shows current volume level"
+					},
+					"response": []
+				},
+				{
+					"name": "Increase volume",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/volume/up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"volume",
+								"up"
+							]
+						},
+						"description": "Increases the volume"
+					},
+					"response": []
+				},
+				{
+					"name": "Decrease volume",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/volume/down",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"volume",
+								"down"
+							]
+						},
+						"description": "Decreases the current volume"
+					},
+					"response": []
+				},
+				{
+					"name": "Set volume",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"level\": 90\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/volume",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"volume"
+							]
+						},
+						"description": "Sets the volume to a specific level"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e94b1b42-1df2-46f1-a30e-2851420ab09e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4698a583-b877-4cea-a277-6de7e6209ab0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
