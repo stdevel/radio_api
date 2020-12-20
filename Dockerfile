@@ -1,11 +1,8 @@
 FROM ubuntu:focal
 MAINTAINER info@cstan.io
 
-# Install mplayer and alsa stuff
-RUN apt-get update && apt-get install -y mplayer alsa-base alsa-tools
-# Install Python stuff
-RUN apt-get install -y python3-pip python3-flask sqlite3 psmisc
-RUN apt-get clean
+# Install mplayer, alsa and Python stuff
+RUN apt-get update && apt-get install -y mplayer alsa-base alsa-tools python3-pip python3-flask sqlite3 psmisc ; apt-get clean
 
 # create application directory
 RUN mkdir -p /opt/radio_api/radio_api
