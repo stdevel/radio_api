@@ -1,4 +1,4 @@
-FROM ubuntu:eoan
+FROM ubuntu:focal
 MAINTAINER info@cstan.io
 
 # Install mplayer and alsa stuff
