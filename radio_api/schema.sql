@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS stations;
 
 CREATE TABLE stations(
     station_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    station_name TEXT NOT NULL,
     station_url TEXT NOT NULL
 );
 
