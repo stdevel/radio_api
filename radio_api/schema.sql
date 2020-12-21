@@ -6,4 +6,4 @@ CREATE TABLE stations(
     station_url TEXT NOT NULL
 );
 
-INSERT INTO stations VALUES(1, 'http://rbb-fritz-live.cast.addradio.de/rbb/fritz/live/mp3/128/stream.mp3');
+INSERT INTO stations VALUES(1, 'Radio Fritz', 'http://rbb-fritz-live.cast.addradio.de/rbb/fritz/live/mp3/128/stream.mp3');
