@@ -1,3 +1,5 @@
+![build our image](https://github.com/stdevel/radio_api/workflows/build%20our%20image/badge.svg)
+
 # radio_api
 
 Simple mplayer-based radio player controllable via REST API

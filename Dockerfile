@@ -1,4 +1,5 @@
-FROM ubuntu:focal
+ARG ARCH=
+FROM ${ARCH}ubuntu:focal
 MAINTAINER info@cstan.io
 
 # Install mplayer, alsa and Python stuff
